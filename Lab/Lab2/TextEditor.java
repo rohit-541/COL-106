@@ -1,10 +1,7 @@
 package Lab.Lab2;
 
 import java.io.BufferedWriter;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.io.OutputStream;
-
 import Lab.LinkedList.Node;
 import Lab.LinkedList.linkedList;
 
@@ -17,6 +14,7 @@ public class TextEditor {
     public int totalLines;
     public Node<String> endNode;
     public int latestVersion;
+
     //Initialize the list
     TextEditor(){
         this.Editor = new linkedList<>(); 
@@ -123,8 +121,17 @@ public class TextEditor {
         }
     }
 
+    public void rename(String newName){
+        if(Editor.head == null){
+            Editor.head = new Node<String>(newName);
+        }else{
+            Editor.head = new Node<String>(newName);
+        }
+    }   
+
     public static void main(String[] args) {
         TextEditor myEditor = new TextEditor();
-
+        myEditor.create("myFile");
+        
     }
 }
