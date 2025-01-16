@@ -1,31 +1,31 @@
-package LinkedList;
+package Lab.LinkedList;
 
-public class LinkedList{
-    public Node head;
-    public Node tail;
+public class linkedList<T>{
+    public Node<T> head;
+    public Node<T> tail;
     public int length;
     
-    LinkedList(){
+    public linkedList(){
         head = null;
         tail = null;
         length = 0;
     }
 
-    public void insert(int value){
+    public void insert(T value){
         if(this.head == null){
-            this.head = new Node(value);
+            this.head = new Node<>(value);
             this.tail = this.head;
         }else{
-            this.tail.next = new Node(value);
+            this.tail.next = new Node<>(value);
             this.tail = this.tail.next;
         }
     }
 
-    public void insertReverse(int value){
+    public void insertReverse(T value){
         if(this.head == null){
-            this.head = new Node(value);
+            this.head = new Node<>(value);
         }else{
-            Node temp = new Node(value);
+            Node<T> temp = new Node<>(value);
             temp.next = this.head;
             head = temp;
         }
@@ -33,7 +33,7 @@ public class LinkedList{
     }
 
     public void print(){
-        Node temp = this.head;
+        Node<T> temp = this.head;
         System.out.print("Start -> ");
         while(temp != null){
             System.out.print(temp.value+" -> ");
