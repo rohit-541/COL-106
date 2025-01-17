@@ -104,7 +104,7 @@ public class TextEditor {
             if(this.Editor.head == null){
                 this.Editor.head = new Node<String>("Newdocument");
             }
-            String outputFile = "./Lab/Lab2/versions/" + this.Editor.head.value + "-(" +(this.latestVersion) +").java";
+            String outputFile = "./Lab/Lab2/versions/" + this.Editor.head.value + "-(" +(this.latestVersion) +").txt";
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile,false));
             Node<String> temp = Editor.head.next;
@@ -131,7 +131,7 @@ public class TextEditor {
 
     public static void main(String[] args) {
         TextEditor myEditor = new TextEditor();
-        myEditor.create("myFile");
-        
+        myEditor.Write("Hey");
+        myEditor.Save();
     }
 }
