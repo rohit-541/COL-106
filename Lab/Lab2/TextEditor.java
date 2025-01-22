@@ -1,9 +1,7 @@
-package Lab.Lab2;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import Lab.LinkedList.Node;
-import Lab.LinkedList.linkedList;
+import LinkedList.*;
 
 
 public class TextEditor {
