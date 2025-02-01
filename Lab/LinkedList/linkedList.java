@@ -1,4 +1,4 @@
-package Lab.LinkedList;
+package LinkedList;
 
 public class linkedList<T>{
     public Node<T> head;

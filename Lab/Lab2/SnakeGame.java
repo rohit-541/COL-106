@@ -1,8 +1,5 @@
-import java.util.Random;
-import java.util.Scanner;
 import java.util.*;
-import java.io.IOException;
-import java.io.Console;
+
 
 public class SnakeGame {
     private int n; // Grid size
@@ -23,6 +20,8 @@ public class SnakeGame {
 
     public SnakeGame(int n) {
         this.n = n;
+        ArrayList<Integer> answer = new ArrayList<>();
+        answer.getLast();
         this.snake = new ArrayList<Pair>();
         snake.add(new Pair(0, 0));
         this.generateApple();
@@ -136,6 +135,7 @@ public class SnakeGame {
                     synchronized(game) {
                         if (!game.moveSnake()) {
                             System.out.println("Game Over!");
+                            scanner.close();
                             System.exit(0);
                         }
                     }
@@ -152,6 +152,7 @@ public class SnakeGame {
             
             if (direction < 0 || direction > 3) {
                 System.out.println("Game Over!");
+                scanner.close();
                 System.exit(0);
             }
             

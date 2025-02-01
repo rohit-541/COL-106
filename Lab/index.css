@@ -1,0 +1,13 @@
+modal-dialog{font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+line-height: 1.42857143;
+color: #333;
+-webkit-font-smoothing: antialiased;
+font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+font-weight: 400;
+box-sizing: border-box;
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;}

@@ -1,4 +1,4 @@
-package Lab.Lab1;
+package Lab1;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;

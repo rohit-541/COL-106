@@ -1,4 +1,4 @@
-package Lab.Lab1;
+package Lab1;
 
 public class SudokuValidator {
 
