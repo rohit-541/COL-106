@@ -1,17 +1,15 @@
 public class IsBST {
 
-    public static boolean isBST(TreeNode root){
+    public static boolean isBST(TreeNode root,long min,long max){
         if(root == null){
             return true;
         }
 
-        int left = root.left != null?root.left.val:Integer.MIN_VALUE;
-        int right = root.right != null?root.right.val:Integer.MAX_VALUE;
+        if(root.val <= min || root.val >= max){
+            return false;
+        }
 
-        boolean isLeft = isBST(root.left);
-        boolean isRight = isBST(root.right);
-
-        return (isLeft && isRight && root.val>=left && root.val < right);
+        return isBST(root.left,min,root.val) && isBST(root.right,root.val,max);
     }
 
     
@@ -21,6 +19,6 @@ public class IsBST {
 		
 		TreeNode root = CreateBT.createBT(inorder,preorder);
 
-        System.out.println(isBST(root));
+        System.out.println(isBST(root,Long.MIN_VALUE,Long.MIN_VALUE));
     }
 }
